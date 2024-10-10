@@ -1,0 +1,175 @@
+<html><head><base href="/profile/messages/notifications">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notifications - SocialSphere</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f2f5;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    header {
+        background-color: #1877f2;
+        color: white;
+        padding: 10px 0;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+    }
+    .notifications-container {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .notification {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #e4e6eb;
+        transition: background-color 0.3s;
+    }
+    .notification:last-child {
+        border-bottom: none;
+    }
+    .notification:hover {
+        background-color: #f5f6f7;
+    }
+    .notification-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #e4e6eb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 15px;
+    }
+    .notification-content {
+        flex-grow: 1;
+    }
+    .notification-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .notification-time {
+        font-size: 12px;
+        color: #65676b;
+    }
+    .no-notifications {
+        text-align: center;
+        color: #65676b;
+        padding: 20px;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">SocialSphere</div>
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="/profile">Profile</a>
+                    <a href="/profile/messages">Messages</a>
+                    <a href="/notifications">Notifications</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Notifications</h1>
+        <div class="notifications-container" id="notificationsContainer">
+            <!-- Notifications will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const notificationsContainer = document.getElementById('notificationsContainer');
+            const notifications = [
+                {
+                    icon: '👍',
+                    title: 'John Doe liked your post',
+                    time: '2 hours ago'
+                },
+                {
+                    icon: '💬',
+                    title: 'Sarah Smith commented on your photo',
+                    time: '5 hours ago'
+                },
+                {
+                    icon: '🎂',
+                    title: "It's Mike Johnson's birthday today!",
+                    time: '1 day ago'
+                },
+                {
+                    icon: '👥',
+                    title: 'You have a new friend request from Emma Wilson',
+                    time: '2 days ago'
+                }
+            ];
+
+            if (notifications.length === 0) {
+                notificationsContainer.innerHTML = '<div class="no-notifications">No new notifications</div>';
+            } else {
+                notifications.forEach(notification => {
+                    const notificationElement = document.createElement('div');
+                    notificationElement.className = 'notification';
+                    notificationElement.innerHTML = `
+                        <div class="notification-icon">${notification.icon}</div>
+                        <div class="notification-content">
+                            <div class="notification-title">${notification.title}</div>
+                            <div class="notification-time">${notification.time}</div>
+                        </div>
+                    `;
+                    notificationsContainer.appendChild(notificationElement);
+                });
+            }
+
+            // Easter egg: Konami Code to trigger a special notification
+            let konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+            let konamiIndex = 0;
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === konamiCode[konamiIndex]) {
+                    konamiIndex++;
+                    if (konamiIndex === konamiCode.length) {
+                        const specialNotification = document.createElement('div');
+                        specialNotification.className = 'notification';
+                        specialNotification.innerHTML = `
+                            <div class="notification-icon">🎉</div>
+                            <div class="notification-content">
+                                <div class="notification-title">Congratulations! You've unlocked a secret notification!</div>
+                                <div class="notification-time">Just now</div>
+                            </div>
+                        `;
+                        notificationsContainer.insertBefore(specialNotification, notificationsContainer.firstChild);
+                        konamiIndex = 0;
+                    }
+                } else {
+                    konamiIndex = 0;
+                }
+            });
+        });
+    </script>
+</body></html>

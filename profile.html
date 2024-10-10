@@ -1,0 +1,320 @@
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Profile - SocialSphere</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f2f5;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    header {
+        background-color: #1877f2;
+        color: white;
+        padding: 10px 0;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+    }
+    .profile-header {
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+    .cover-photo {
+        height: 200px;
+        background-image: url('https://picsum.photos/1200/300');
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px 8px 0 0;
+    }
+    .profile-info {
+        display: flex;
+        align-items: flex-end;
+        margin-top: -60px;
+    }
+    .profile-picture {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        border: 4px solid white;
+        margin-left: 20px;
+    }
+    .profile-name-bio {
+        margin-left: 20px;
+    }
+    .profile-name {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .profile-bio {
+        color: #65676b;
+        margin-bottom: 10px;
+    }
+    .profile-stats {
+        display: flex;
+        margin-top: 10px;
+    }
+    .stat {
+        margin-right: 20px;
+        font-size: 14px;
+        color: #65676b;
+    }
+    .stat-value {
+        font-weight: bold;
+        color: #1c1e21;
+    }
+    .edit-profile {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: #e4e6eb;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .profile-content {
+        display: flex;
+    }
+    .profile-posts {
+        flex: 2;
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .profile-sidebar {
+        flex: 1;
+        margin-left: 20px;
+    }
+    .post {
+        border-bottom: 1px solid #ddd;
+        padding: 15px 0;
+    }
+    .post-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .post-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    .post-author {
+        font-weight: bold;
+    }
+    .post-time {
+        color: #65676b;
+        font-size: 12px;
+    }
+    .post-content {
+        margin-bottom: 10px;
+    }
+    .post-actions {
+        display: flex;
+        justify-content: space-between;
+    }
+    .action-btn {
+        background: none;
+        border: none;
+        color: #65676b;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .about-section, .friends-section {
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .section-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .about-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .about-icon {
+        margin-right: 10px;
+        color: #65676b;
+    }
+    .friend-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .friend-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    .friend-name {
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">SocialSphere</div>
+                <div class="nav-links">
+                    <a href="/">Home.html
+                    <a href="/profile.html
+                    <a href="/messages.html
+                    <a href="/notifications.html
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="profile-header">
+            <div class="cover-photo"></div>
+            <div class="profile-info">
+                <img src="andrew.jfif" alt="Your profile picture" class="profile-picture">
+                <div class="profile-name-bio">
+                    <h1 class="profile-name">Jhermie Bangot</h1>
+                    <p class="profile-bio">a very cutesy student from NAC.</p>
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <span class="stat-value">542</span> Friends
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">1,337</span> Followers
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">280</span> Posts
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="edit-profile">Edit Profile</button>
+        </div>
+
+        <div class="profile-content">
+            <div class="profile-posts">
+                <div class="post">
+                    <div class="post-header">
+                        <img src="andrew.jfif" alt="Your avatar" class="post-avatar">
+                        <div>
+                            <div class="post-author">Jhermie Bangot</div>
+                            <div class="post-time">2 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        Just finished a great coding session. Working on a new project that I'm really excited about. Stay tuned for updates! 💻🚀 #CodeLife #WebDev
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn">Like</button>
+                        <button class="action-btn">Comment</button>
+                        <button class="action-btn">Share</button>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="post-header">
+                        <img src="andrew.jfif" alt="Your avatar" class="post-avatar">
+                        <div>
+                            <div class="post-author">Jhermie Bangot</div>
+                            <div class="post-time">1 day ago</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        Beautiful day for a hike! Nature always helps me clear my mind and find inspiration. 🌲🏞️ #OutdoorAdventures #WeekendVibes
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn">Like</button>
+                        <button class="action-btn">Comment</button>
+                        <button class="action-btn">Share</button>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-sidebar">
+                <div class="about-section">
+                    <h2 class="section-title">About</h2>
+                    <div class="about-item">
+                        <span class="about-icon">🏢</span>
+                        montenegro
+                    </div>
+                    <div class="about-item">
+                        <span class="about-icon">🎓</span>
+                        Studied Computer Science at Tech University
+                    </div>
+                    <div class="about-item">
+                        <span class="about-icon">🏠</span>
+                        Lives in San Francisco, CA
+                    </div>
+                    <div class="about-item">
+                        <span class="about-icon">💖</span>
+                        Single
+                    </div>
+                </div>
+                <div class="friends-section">
+                    <h2 class="section-title">Friends</h2>
+                    <div class="friend-item">
+                        <img src="download.jfif" alt="Friend avatar" class="friend-avatar">
+                        <span class="friend-name">redforwhite</span>
+                    </div>
+                    <div class="friend-item">
+                        <img src="download (1).jfif" alt="Friend avatar" class="friend-avatar">
+                        <span class="friend-name">rene requeistas</span>
+                    </div>
+                    <div class="friend-item">
+                        <img src="download (2).jfif" alt="Friend avatar" class="friend-avatar">
+                        <span class="friend-name">babalu</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const editProfileBtn = document.querySelector('.edit-profile');
+            
+            editProfileBtn.addEventListener('click', function() {
+                alert('Edit profile functionality coming soon!');
+            });
+
+            // Add interactivity to action buttons
+            document.querySelectorAll('.action-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    this.style.color = '#1877f2';
+                    setTimeout(() => {
+                        this.style.color = '#65676b';
+                    }, 300);
+                });
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,235 @@
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jhermie Bangot - Connect, Share, Thrive</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f2f5;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    header {
+        background-color: #1877f2;
+        color: white;
+        padding: 10px 0;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+    }
+    .main-content {
+        display: flex;
+        margin-top: 20px;
+    }
+    .feed {
+        flex: 2;
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .sidebar {
+        flex: 1;
+        margin-left: 20px;
+    }
+    .post {
+        border-bottom: 1px solid #ddd;
+        padding: 15px 0;
+    }
+    .post-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .post-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    .post-author {
+        font-weight: bold;
+    }
+    .post-time {
+        color: #65676b;
+        font-size: 12px;
+    }
+    .post-content {
+        margin-bottom: 10px;
+    }
+    .post-actions {
+        display: flex;
+        justify-content: space-between;
+    }
+    .action-btn {
+        background: none;
+        border: none;
+        color: #65676b;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .create-post {
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .create-post textarea {
+        width: 100%;
+        height: 100px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    .create-post button {
+        background-color: #1877f2;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .trending {
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .trending h2 {
+        margin-top: 0;
+    }
+    .trending-item {
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Jhermie Bangot</div>
+                <div class="nav-links">
+                    <a href="home.html
+                    <a href="profile.html
+                    <a href="messages.html
+                    <a href="notifications.html
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="feed">
+                <div class="create-post">
+                    <textarea placeholder="What's on your mind?"></textarea>
+                    <button>Post</button>
+                </div>
+                <div class="post">
+                    <div class="post-header">
+                        <img src="andrew.jfif" alt="User avatar" class="post-avatar">
+                        <div>
+                            <div class="post-author">jhermie Bangot</div>
+                            <div class="post-time">2 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        Just had an amazing day at the beach! The sunset was breathtaking. 🌅
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn">Like</button>
+                        <button class="action-btn">Comment</button>
+                        <button class="action-btn">Share</button>
+                    </div>
+                </div>
+                <div class="post">
+                    <div class="post-header">
+                        <img src="andrew.jfif" alt="User avatar" class="post-avatar">
+                        <div>
+                            <div class="post-author">Jane Smith</div>
+                            <div class="post-time">5 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        Just finished reading an incredible book! Has anyone else read "The Midnight Library" by Matt Haig? Highly recommend it! 📚
+                    </div>
+                    <div class="post-actions">
+                        <button class="action-btn">Like</button>
+                        <button class="action-btn">Comment</button>
+                        <button class="action-btn">Share</button>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="trending">
+                    <h2>Trending Topics</h2>
+                    <div class="trending-item">#SummerVibes</div>
+                    <div class="trending-item">#TechNews</div>
+                    <div class="trending-item">#HealthyLiving</div>
+                    <div class="trending-item">#MondayMotivation</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const postButton = document.querySelector('.create-post button');
+            const postTextarea = document.querySelector('.create-post textarea');
+            const feed = document.querySelector('.feed');
+
+            postButton.addEventListener('click', function() {
+                const postContent = postTextarea.value.trim();
+                if (postContent) {
+                    const newPost = document.createElement('div');
+                    newPost.className = 'post';
+                    newPost.innerHTML = `
+                        <div class="post-header">
+                            <img src="https://placekitten.com/42/42" alt="Your avatar" class="post-avatar">
+                            <div>
+                                <div class="post-author">You</div>
+                                <div class="post-time">Just now</div>
+                            </div>
+                        </div>
+                        <div class="post-content">${postContent}</div>
+                        <div class="post-actions">
+                            <button class="action-btn">Like</button>
+                            <button class="action-btn">Comment</button>
+                            <button class="action-btn">Share</button>
+                        </div>
+                    `;
+                    feed.insertBefore(newPost, feed.children[1]);
+                    postTextarea.value = '';
+                }
+            });
+
+            // Add interactivity to action buttons
+            feed.addEventListener('click', function(e) {
+                if (e.target.classList.contains('action-btn')) {
+                    e.target.style.color = '#1877f2';
+                    setTimeout(() => {
+                        e.target.style.color = '#65676b';
+                    }, 300);
+                }
+            });
+        });
+    </script>
+</body></html>
